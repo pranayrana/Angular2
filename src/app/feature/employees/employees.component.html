@@ -1,0 +1,23 @@
+
+
+
+<div class="container">
+  <h2>Employees</h2>
+      
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+    </thead>
+    <tbody *ngIf='employees'>
+      <tr *ngFor="let employee of employees | async">
+          <td>{{employee.ID}}</td>
+          <td>{{employee.firstname}}</td>
+          <td>{{employee.lastname}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> 
